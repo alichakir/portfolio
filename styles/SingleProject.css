@@ -1,0 +1,105 @@
+:root {
+ --primaryLightColor: #d4e6a5;
+ --primaryColor: #476a2e;
+ --primaryDarkColor: #c02c03;
+ --mainWhite: #fff;
+ --offWhite: #f7f7f7;
+ --mainBackground: #f1f5f8;
+ --mainOverlay: rgba(35, 10, 36, 0.4);
+ --mainBlack: #222;
+ --mainGrey: #ececec;
+ --darkGrey: #afafaf;
+ --mainRed: #bd0303;
+ --mainTransition: all 0.3s linear;
+ --mainSpacing: 0.3rem;
+ --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+ --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+ --mainBorderRadius: 0.05rem;
+ --smallWidth: 75vw;
+ --maxWidth: 40rem;
+ --fullWidth: 1170px;
+}
+
+.sectionn {
+ width : 90%;
+ height: fit-content;
+}
+.section-title {
+ font-size: 1.5rem;
+ text-transform: capitalize;
+ letter-spacing: var(--mainSpacing);
+ text-align: center;
+ margin-bottom: 3.5rem;
+}
+.cocktail-section {
+ text-align: center;
+}
+
+.drink {
+ width: var(--smallWidth);
+ max-width: var(--fullWidth);
+ margin: 0 auto;
+ text-align: left;
+}
+.drink img{
+ margin: auto;
+ width: 400px;
+ height: 400px;
+}
+
+@media screen and (max-width: 450px) {
+ .drink img{
+  width: 95%;
+  height: 300px;
+ }
+}
+
+.drink p {
+ font-weight: bold;
+ text-transform: capitalize;
+ line-height: 1.8;
+}
+.drink span {
+ margin-right: 0.5rem;
+}
+.drink-data {
+ background: var(--primaryLightColor);
+ padding: 0.25rem 0.5rem;
+ border-radius: var(--mainBorderRadius);
+ color: var(--primaryColor);
+}
+.drink-info {
+ padding-top: 2rem;
+}
+@media screen and (min-width: 992px) {
+ .drink {
+   display: grid;
+   grid-template-columns: 2fr 3fr;
+   gap: 3rem;
+   align-items: center;
+ }
+ .drink-info {
+   padding-top: 0;
+ }
+}
+
+.btn,
+.btn-white,
+.btn-primary {
+ text-transform: uppercase;
+ letter-spacing: var(--mainSpacing);
+ color: var(--primaryColor);
+ border: 2px solid var(--primaryColor);
+ padding: 0.45rem 0.8rem;
+ display: inline-block;
+ transition: var(--mainTransition);
+ cursor: pointer;
+ font-size: 0.8rem;
+ background: transparent;
+ border-radius: var(--mainBorderRadius);
+ display: inline-block;
+}
+.btn:hover {
+ background: var(--primaryColor);
+ color: var(--mainWhite);
+}
